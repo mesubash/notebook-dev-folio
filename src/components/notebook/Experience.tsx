@@ -11,7 +11,7 @@ function TimelineEntry({ entry }: { entry: ExperienceEntry }) {
         <span className="yr-end">{entry.end}</span>
       </div>
       <div className="what">
-        <h4>{entry.role}</h4>
+        <h3>{entry.role}</h3>
         <div className="where">
           {entry.company} · {entry.location}
         </div>

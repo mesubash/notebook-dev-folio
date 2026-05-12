@@ -11,7 +11,7 @@
   --paper-edge:   #b8a373;
   --ink:          #2c1810;
   --ink-soft:     #5a3a22;
-  --ink-fade:     #8a6a48;
+  --ink-fade:     #6e4d29;
   --margin-red:   #b54a3a;
   --grain-alpha:  0.55;
 }
@@ -322,7 +322,7 @@ body {
 .timeline .entry .when .yr-end { display: block; font-size: 22px; color: var(--ink-soft); }
 .timeline .entry .when .dash { display: block; font-size: 18px; color: var(--ink-fade); margin: -2px 0; }
 .timeline .entry .what { font-family: 'Special Elite', monospace; font-size: 16px; line-height: 1.7; }
-.timeline .entry .what h4 {
+.timeline .entry .what h3 {
   font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px;
   margin: 0 0 2px; color: var(--ink);
 }

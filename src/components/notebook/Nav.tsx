@@ -66,7 +66,10 @@ export function Nav() {
       <aside
         id="mobile-drawer"
         className={`nav-drawer ${open ? "is-open" : ""}`}
-        aria-hidden={!open}
+        // `inert` removes the subtree from tab order, click & a11y trees
+        // when the drawer is closed — replaces aria-hidden which left the
+        // close button and nav links focusable while visually hidden.
+        inert={!open}
       >
         <div className="nav-drawer-inner">
           <div className="nav-drawer-head">

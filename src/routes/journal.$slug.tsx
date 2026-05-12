@@ -9,10 +9,11 @@ import { site } from "@/content/portfolio";
 import { formatWritingDate, getWriting, renderMarkdown } from "@/lib/writings";
 
 export const Route = createFileRoute("/journal/$slug")({
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
     const writing = getWriting(params.slug);
     if (!writing) throw notFound();
-    return { writing, html: renderMarkdown(writing.content) };
+    const html = await renderMarkdown(writing.content);
+    return { writing, html };
   },
   head: ({ loaderData }) => {
     if (!loaderData) return {};

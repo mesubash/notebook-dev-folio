@@ -1,5 +1,3 @@
-import { marked } from "marked";
-
 export type Writing = {
   slug: string;
   title: string;
@@ -88,7 +86,8 @@ export function getWriting(slug: string): Writing | undefined {
   return writings.find((w) => w.slug === slug);
 }
 
-export function renderMarkdown(content: string): string {
+export async function renderMarkdown(content: string): Promise<string> {
+  const { marked } = await import("marked");
   return marked.parse(content, { async: false }) as string;
 }
 
