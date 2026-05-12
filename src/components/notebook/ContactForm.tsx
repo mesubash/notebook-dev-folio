@@ -13,11 +13,12 @@ const FORM_ID = "xvggerej";
 
 type Status = "idle" | "checking" | "valid" | "invalid";
 
-function StatusIcon({ status }: { status: Status }) {
+function StatusIcon({ status }: { readonly status: Status }) {
   if (status === "checking") {
     return (
       <span className="cform-status cform-status-checking" aria-label="checking">
         <span className="spinner" aria-hidden="true" />
+        {' '}
         checking…
       </span>
     );

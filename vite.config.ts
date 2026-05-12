@@ -1,19 +1,18 @@
-import { cloudflare } from "@cloudflare/vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
-import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import { tanstackRouter } from "@tanstack/router-plugin/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-export default defineConfig(({ command }) => ({
+export default defineConfig({
   plugins: [
-    // Start plugin must come before the React plugin.
-    tanstackStart({
-      server: { entry: "server" },
-    }),
+    tanstackRouter({ target: "react", autoCodeSplitting: true }),
     react(),
     tailwindcss(),
     tsconfigPaths(),
-    command === "build" && cloudflare(),
   ],
-}));
+  build: {
+    outDir: "dist",
+    sourcemap: true,
+  },
+});
