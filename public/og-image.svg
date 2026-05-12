@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <!-- paper background gradient -->
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"   stop-color="#f4ead7"/>
+      <stop offset="0.55" stop-color="#f2e8d5"/>
+      <stop offset="1"   stop-color="#e6d8b8"/>
+    </linearGradient>
+
+    <!-- subtle vignette -->
+    <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
+      <stop offset="0" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#3a2a14" stop-opacity="0.18"/>
+    </radialGradient>
+
+    <!-- ink blotch noise (decorative) -->
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" seed="3"/>
+      <feColorMatrix values="0 0 0 0 0.17  0 0 0 0 0.09  0 0 0 0 0.05  0 0 0 0.20 0"/>
+    </filter>
+  </defs>
+
+  <!-- paper page -->
+  <rect width="1200" height="630" fill="url(#paper)"/>
+  <rect width="1200" height="630" fill="url(#vignette)"/>
+  <rect width="1200" height="630" filter="url(#grain)" opacity="0.35"/>
+
+  <!-- inner border (faint) -->
+  <rect x="24" y="24" width="1152" height="582" fill="none" stroke="#8a6a48" stroke-width="1" opacity="0.25"/>
+
+  <!-- red margin line -->
+  <line x1="170" y1="40" x2="170" y2="590" stroke="#b54a3a" stroke-width="2.2" opacity="0.9"/>
+
+  <!-- ruled lines (very faint) -->
+  <g stroke="#8a6a48" stroke-width="0.6" opacity="0.18">
+    <line x1="200" y1="120" x2="1140" y2="120"/>
+    <line x1="200" y1="180" x2="1140" y2="180"/>
+    <line x1="200" y1="240" x2="1140" y2="240"/>
+    <line x1="200" y1="300" x2="1140" y2="300"/>
+    <line x1="200" y1="360" x2="1140" y2="360"/>
+    <line x1="200" y1="420" x2="1140" y2="420"/>
+    <line x1="200" y1="480" x2="1140" y2="480"/>
+    <line x1="200" y1="540" x2="1140" y2="540"/>
+  </g>
+
+  <!-- section label -->
+  <text x="210" y="118"
+        font-family="'Courier New', 'Special Elite', monospace"
+        font-size="20" letter-spacing="4" fill="#5a3a22">
+    I · NOTEBOOK ENTRY № 07
+  </text>
+
+  <!-- greet -->
+  <text x="210" y="180"
+        font-family="'Brush Script MT', 'Apple Chancery', cursive"
+        font-size="40" font-style="italic" fill="#5a3a22">
+    hello —
+  </text>
+
+  <!-- big handwritten name -->
+  <text x="210" y="350"
+        font-family="'Brush Script MT', 'Apple Chancery', 'Snell Roundhand', cursive"
+        font-size="190" font-weight="700" fill="#2c1810">
+    Subash.
+  </text>
+
+  <!-- tagline -->
+  <text x="210" y="430"
+        font-family="'Courier New', 'Special Elite', monospace"
+        font-size="26" fill="#2c1810">
+    Backend engineer. Writes systems, breaks them, fixes them again —
+  </text>
+  <text x="210" y="468"
+        font-family="'Courier New', 'Special Elite', monospace"
+        font-size="26" fill="#2c1810">
+    mostly Java and Spring Boot, with Flutter and React on the side.
+  </text>
+
+  <!-- entry meta -->
+  <text x="210" y="540"
+        font-family="'Courier New', 'Special Elite', monospace"
+        font-size="18" letter-spacing="2" fill="#8a6a48">
+    SUBASHSDHAMI.COM.NP · KATHMANDU · 2026
+  </text>
+
+  <!-- right-side stamp -->
+  <g transform="translate(960 90) rotate(8)">
+    <rect width="190" height="120" fill="none" stroke="#b54a3a" stroke-width="3" rx="3" opacity="0.75"/>
+    <text x="95" y="50" text-anchor="middle"
+          font-family="'Courier New', monospace" font-size="20" letter-spacing="4"
+          fill="#b54a3a" opacity="0.85">NOTEBOOK</text>
+    <text x="95" y="95" text-anchor="middle"
+          font-family="'Brush Script MT', cursive" font-size="48" font-weight="700"
+          fill="#b54a3a" opacity="0.85">№ 07</text>
+  </g>
+
+  <!-- page number bottom-right -->
+  <text x="1150" y="592" text-anchor="end"
+        font-family="'Courier New', monospace" font-size="16" letter-spacing="2"
+        fill="#8a6a48">p. 01</text>
+
+  <!-- dog-ear top-right -->
+  <polygon points="1200,0 1200,90 1110,0" fill="#cdb888"/>
+  <polygon points="1200,0 1200,90 1110,0" fill="#a88a55" opacity="0.35"/>
+  <polygon points="1194,6 1194,84 1116,6" fill="#e0cfa6"/>
+  <line x1="1110" y1="0" x2="1200" y2="90" stroke="#7a5a30" stroke-width="1.2" opacity="0.55"/>
+</svg>
