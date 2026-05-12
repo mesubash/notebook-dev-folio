@@ -677,6 +677,45 @@ body {
   .cform input, .cform textarea { font-size: 16px; }
 }
 
+/* additive: 404 page bits */
+.hero .stamp-date.stamp-404 {
+  transform: rotate(-9deg);
+}
+.hero .stamp-date.stamp-404 .big {
+  font-size: 40px;
+}
+.nf-list {
+  list-style: none; padding: 0; margin: 18px 0 22px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.nf-list li {
+  font-family: 'Courier Prime', monospace;
+  font-size: 17px; line-height: 1.6;
+}
+.nf-list li a {
+  font-family: 'Caveat', cursive;
+  font-size: 26px; color: var(--ink); text-decoration: none;
+  border-bottom: 1px dashed var(--ink-fade);
+  padding-bottom: 1px; margin-right: 4px;
+}
+.nf-list li a:hover { border-bottom-style: solid; color: var(--margin-red); }
+.nf-list-note { color: var(--ink-soft); }
+.err-action-link {
+  font-family: 'Caveat', cursive;
+  font-size: 26px;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px dashed var(--ink-fade);
+  padding: 0 0 1px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+.err-action-link:hover { border-bottom-style: solid; color: var(--margin-red); }
+@media (max-width: 720px) {
+  .nf-list li a, .err-action-link { font-size: 22px; }
+}
+
 /* additive: résumé "enclosure" note in the hero */
 .hero .enclosure {
   display: inline-flex; align-items: center; gap: 8px;
