@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "bun scripts/gen-sitemap.mjs && vite build",
-    "build:dev": "bun scripts/gen-sitemap.mjs && vite build --mode development",
+    "build": "bun scripts/gen-sitemap.mjs && vite build && bun scripts/gen-prerender.mjs",
+    "build:dev": "bun scripts/gen-sitemap.mjs && vite build --mode development && bun scripts/gen-prerender.mjs",
     "preview": "vite preview",
     "sitemap": "bun scripts/gen-sitemap.mjs",
+    "prerender": "bun scripts/gen-prerender.mjs",
     "assets": "bun scripts/gen-assets.mjs",
     "lint": "eslint .",
     "format": "prettier --write ."

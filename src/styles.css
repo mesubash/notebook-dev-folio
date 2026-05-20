@@ -309,6 +309,45 @@ body {
   transform: rotate(-0.4deg); max-width: 540px;
 }
 
+/* SHARE */
+.share-btn {
+  font-family: 'Caveat', cursive; cursor: pointer; background: transparent;
+  border: none; padding: 0 0 1px; color: var(--ink);
+  vertical-align: baseline; transition: color 0.15s, border-color 0.15s;
+}
+.share-btn:hover { color: var(--margin-red); }
+.share-btn:focus-visible {
+  outline: 2px solid var(--margin-red); outline-offset: 3px; border-radius: 1px;
+}
+
+.share-btn--entry {
+  font-size: 26px; border-bottom: 1.5px solid var(--ink);
+}
+.share-btn--entry:hover { border-bottom-color: var(--margin-red); }
+.share-btn--entry::before {
+  content: '↗ '; font-family: 'Special Elite', monospace; font-size: 17px;
+}
+
+.share-btn--card {
+  font-size: 24px; color: var(--ink-soft);
+  border-bottom: 1.5px solid var(--ink-fade);
+}
+.share-btn--card:hover { color: var(--margin-red); border-bottom-color: var(--margin-red); }
+
+.share-line {
+  margin-top: 18px; display: flex; align-items: baseline;
+  flex-wrap: wrap; gap: 4px 10px;
+}
+.share-lead {
+  font-family: 'Caveat', cursive; font-size: 24px; color: var(--ink-fade);
+  transform: rotate(-0.5deg);
+}
+
+.proj .link .link-sep {
+  font-family: 'Caveat', cursive; font-size: 24px; color: var(--ink-fade);
+  margin: 0 8px;
+}
+
 /* EXPERIENCE */
 .timeline { position: relative; margin-top: 8px; }
 .timeline .entry {

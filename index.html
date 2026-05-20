@@ -3,11 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <!-- SEO:start — per-page <title>, description, Open Graph, Twitter and
+         canonical tags. scripts/gen-prerender.mjs swaps this whole block at
+         build time so crawlers get a correct preview for each journal page.
+         Keep the SEO:start / SEO:end marker comments intact. -->
     <title>Subash Singh Dhami — Software Engineer · Notebook</title>
     <meta
       name="description"
       content="Handwritten-notebook portfolio of Subash Singh Dhami — a backend engineer in Kathmandu writing Java and Spring Boot services, with Flutter and React when the work spills past the API."
     />
+    <meta property="og:title" content="Subash Singh Dhami — Software Engineer · Notebook" />
+    <meta
+      property="og:description"
+      content="Handwritten-notebook portfolio — Spring Boot, Flutter, React, and the boring plumbing in between."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://subashsdhami.com.np" />
+    <meta property="og:image" content="https://subashsdhami.com.np/og-image.png" />
+    <meta name="twitter:title" content="Subash Singh Dhami — Software Engineer" />
+    <meta
+      name="twitter:description"
+      content="Handwritten-notebook portfolio — Spring Boot, Flutter, React, and the boring plumbing in between."
+    />
+    <meta name="twitter:image" content="https://subashsdhami.com.np/og-image.png" />
+    <link rel="canonical" href="https://subashsdhami.com.np" />
+    <!-- SEO:end -->
+
     <meta name="author" content="Subash Singh Dhami" />
     <meta
       name="keywords"
@@ -16,29 +37,15 @@
     <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#f2e8d5" />
 
-    <!-- Open Graph -->
+    <!-- Open Graph (invariant across pages) -->
     <meta property="og:site_name" content="Subash Singh Dhami" />
-    <meta property="og:title" content="Subash Singh Dhami — Software Engineer · Notebook" />
-    <meta
-      property="og:description"
-      content="Handwritten-notebook portfolio — Spring Boot, Flutter, React, and the boring plumbing in between."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://subashsdhami.com.np" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:image" content="https://subashsdhami.com.np/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Subash Singh Dhami — notebook portfolio cover" />
 
-    <!-- Twitter -->
+    <!-- Twitter (invariant across pages) -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Subash Singh Dhami — Software Engineer" />
-    <meta
-      name="twitter:description"
-      content="Handwritten-notebook portfolio — Spring Boot, Flutter, React, and the boring plumbing in between."
-    />
-    <meta name="twitter:image" content="https://subashsdhami.com.np/og-image.png" />
     <meta name="twitter:image:alt" content="Subash Singh Dhami — notebook portfolio cover" />
     <meta name="twitter:site" content="@subashdhamee" />
     <meta name="twitter:creator" content="@subashdhamee" />
@@ -49,8 +56,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-
-    <link rel="canonical" href="https://subashsdhami.com.np" />
 
     <!-- Fonts: non-blocking. preconnect warms TLS, preload+onload swap
          downloads the CSS off the critical path, <noscript> keeps it

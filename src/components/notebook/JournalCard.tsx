@@ -1,4 +1,6 @@
 import { Link } from "@tanstack/react-router";
+import { ShareButton } from "@/components/notebook/ShareButton";
+import { site } from "@/content/portfolio";
 import type { Writing } from "@/lib/writings";
 import { formatWritingDate } from "@/lib/writings";
 
@@ -48,6 +50,15 @@ export function JournalCard({
         <Link to="/journal/$slug" params={{ slug: entry.slug }}>
           read the long version
         </Link>
+        <span className="link-sep" aria-hidden="true">
+          ·
+        </span>
+        <ShareButton
+          url={`${site.url}/journal/${entry.slug}`}
+          title={entry.title}
+          text={entry.excerpt}
+          variant="card"
+        />
       </p>
       {entry.tags.length > 0 && (
         <p className="sticky-note">tags — {entry.tags.join(", ")}</p>

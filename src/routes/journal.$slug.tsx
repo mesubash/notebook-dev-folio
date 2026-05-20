@@ -5,6 +5,7 @@ import { Footer } from "@/components/notebook/Footer";
 import { Nav } from "@/components/notebook/Nav";
 import { PageNum } from "@/components/notebook/PageNum";
 import { PaperLayers } from "@/components/notebook/PaperLayers";
+import { ShareButton } from "@/components/notebook/ShareButton";
 import { site } from "@/content/portfolio";
 import { formatWritingDate, getWriting, renderMarkdown } from "@/lib/writings";
 
@@ -42,6 +43,7 @@ export const Route = createFileRoute("/journal/$slug")({
 
 function JournalEntry() {
   const { writing, html } = Route.useLoaderData();
+  const url = `${site.url}/journal/${writing.slug}`;
 
   return (
     <>
@@ -73,6 +75,15 @@ function JournalEntry() {
           {writing.tags.length > 0 && (
             <p className="sticky-note">tags — {writing.tags.join(", ")}</p>
           )}
+          <p className="share-line">
+            <span className="share-lead">pass it along —</span>
+            <ShareButton
+              url={url}
+              title={writing.title}
+              text={writing.excerpt}
+              variant="entry"
+            />
+          </p>
           <span className="signoff">— S.</span>
 
           <Divider d="M 6 12 C 80 18, 160 6, 240 13 C 320 19, 400 7, 480 12 C 560 17, 640 9, 720 13 C 740 14, 752 12, 758 12" />
